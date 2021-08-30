@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "gatsby-website",
+    title: "HWC First Blog",
+    description: "This is my blog made from scratch!"
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
@@ -19,10 +20,17 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
+        name: "images",
+        path: "./src/images/",
+      }
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: "./src/blog/",
+      }
+    },
+    "gatsby-transformer-remark",
   ],
 };
