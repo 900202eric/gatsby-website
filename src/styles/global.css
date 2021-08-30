@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #fafafa;
+  @apply dark:bg-gray-700;
+  color: black;
+  @apply dark:text-white;
+}
+
+body {
+  @apply p-5
+}
+
+.header {
+  color: #585858;
+  @apply dark:text-white;
+}
+
+img {
+  display: block; 
+  @apply shadow-sm;
+  @apply mx-auto;
+  @apply my-5; 
+}

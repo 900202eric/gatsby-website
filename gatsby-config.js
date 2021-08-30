@@ -32,5 +32,11 @@ module.exports = {
       }
     },
     "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss")],
+      },
+    },
   ],
 };
