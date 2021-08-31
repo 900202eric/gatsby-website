@@ -5,16 +5,15 @@ import { ThemeContext } from "./themeContext"
 const Toggle = () => {
   const { theme, setTheme } = React.useContext(ThemeContext)
   return (
-    <div className="transition duration-500 ease-in-out rounded-full p-2 cursor-pointer">
+    <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    className="p-3 rounded-full cursor-pointer hover:bg-gray-800 hover:bg-opacity-20">
       {theme === "dark" ? (
         <HiSun
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+          className="text-gray-500 dark:text-white text-2xl cursor-pointer"
         />
       ) : (
         <HiMoon
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+          className="text-gray-500 dark:text-white text-2xl cursor-pointer"
         />
       )}
     </div>

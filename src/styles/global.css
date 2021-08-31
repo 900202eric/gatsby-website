@@ -4,17 +4,17 @@
 
 body {
   background-color: #fafafa;
-  @apply dark:bg-gray-700;
+  @apply dark:bg-gray-700 transition duration-300;
   color: black;
   @apply dark:text-white;
 }
 
 body {
-  @apply p-5
+  @apply sm:px-5;
 }
 
 .header {
-  color: #585858;
+  color: #1a1a1a;
   @apply dark:text-white;
 }
 
@@ -24,3 +24,9 @@ img {
   @apply mx-auto;
   @apply my-5; 
 }
+
+.cover img{
+  @apply shadow-none my-0 mx-0;
+  z-index: -10;
+}
+

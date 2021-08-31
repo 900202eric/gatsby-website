@@ -1,0 +1,195 @@
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6, .markdown hr {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown p {
+  line-height: 200%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+body { counter-reset: h1counter h2counter h3counter h4counter h5counter h6counter; }
+
+.order h1 { counter-reset: h2counter; }
+.order h2 { counter-reset: h3counter; }
+.order h3 { counter-reset: h4counter; }
+.order h4 { counter-reset: h5counter; }
+.order h5 { counter-reset: h6counter; }
+
+.order h2:before {
+    counter-increment: h2counter;
+    color:#8b8b8b;
+    margin-right: 0.2rem;
+    font-weight: 300;
+    content: counter(h2counter) " ";
+}
+
+.order h3:before {
+    counter-increment: h3counter;
+    color:#8b8b8b;
+    margin-right: 0.2rem;
+    font-weight: 300;
+    content: counter(h2counter) "-" counter(h3counter, lower-alpha)" ";
+}
+
+.order h4:before {
+    counter-increment: h4counter;
+    color:#8b8b8b;
+    margin-right: 0.2rem;
+    font-weight: 300;
+    content: counter(h2counter) "-" counter(h3counter, lower-alpha) "." counter(h4counter, lower-roman)" ";
+}
+
+.order h5:before {
+    counter-increment: h5counter;
+    color:#8b8b8b;
+    margin-right: 0.2rem;
+    font-weight: 300;
+    content: counter(h2counter) "-" counter(h3counter, lower-alpha) "." counter(h4counter, lower-roman) "-" counter(h5counter, lower-greek)" ";
+}
+
+.order h6:before {
+    counter-increment: h6counter;
+    color:#8b8b8b;
+    margin-right: 0.2rem;
+    font-weight: 300;
+    content: counter(h2counter) "-" counter(h3counter, lower-alpha) "." counter(h4counter, lower-roman) "-" counter(h5counter, lower-greek) "." counter(h6counter)" ";
+}
+
+.post-toc {
+  padding: 1em;
+  border-left: 5px solid lightgray;
+  @apply dark:bg-gray-600;
+  @apply bg-gray-100;
+}
+
+.post-toc p, .post-toc li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+blockquote {
+  margin: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-left: solid 3px #8d8d8d;
+  font-size: 1.5rem;
+  color:grey;
+  @apply dark:text-gray-400;
+}
+
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+ul ul {
+  margin-left: 2rem;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+li::marker {
+  display: inline;
+}
+
+li p{
+  display: inline;
+  margin: 0rem;
+}
+
+code {
+  background-color: rgb(255, 222, 227);
+  color: crimson;
+  border-radius: 3px;
+  padding: 1.5px;
+  margin: 1px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+:root {
+  --deckgo-highlight-code-carbon-box-shadow: rgba(0, 0, 0, 0.55) 0 4px 4px;
+  --deckgo-highlight-code-carbon-header-button-red-border: 0.1px #e0443e;
+  --deckgo-highlight-code-carbon-header-button-yellow-border: 0.1px #dea123;
+  --deckgo-highlight-code-carbon-header-button-green-border: 0.1px #1aab29;
+  --deckgo-highlight-code-font-size: 1rem;
+  --deckgo-highlight-code-line-numbers-color: white;
+  --deckgo-lowlight-code-line-numbers-color: grey;
+}
+
+table {
+  width: 100%;
+  @apply mx-auto;
+  border: solid 2px rgba(128, 128, 128, 0.425);
+}
+
+thead {
+  border-bottom: solid 2px rgba(128, 128, 128, 0.425);
+}
+
+th {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+tr {
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2rem;
+  border-bottom: solid 2px rgba(128, 128, 128, 0.425);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(238, 236, 236);
+  @apply dark:bg-gray-600
+}
+
+a {
+  color: rgb(2, 112, 255);
+  @apply dark:text-blue-300;
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: inline;
+  box-shadow: rgba(0, 0, 0, 0.55) 0 4px 8px;
+  width: 40%;
+  margin: 1rem;
+}

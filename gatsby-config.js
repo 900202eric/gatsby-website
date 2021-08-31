@@ -27,11 +27,34 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "blog",
-        path: "./src/blog/",
+        name: "pages",
+        path: "./src/pages/",
       }
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          "gatsby-remark-reading-time",
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: "carbon",
+              theme: "one-dark",
+              lineNumbers: true,
+            },
+          },
+          "gatsby-remark-emoji",
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              offsetY: '100',
+              className: 'auto-anchor'
+            }
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {

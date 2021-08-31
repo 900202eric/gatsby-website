@@ -3,13 +3,13 @@ import Toggle from "./toggle"
 
 export default function Header() {
   return (
-    <div className="container flex flex-row items-center my-5 font-sans">
-      <a href="/" className="header text-4xl mx-4 hover:underline cursor-pointer">HWC's Blog</a>
-      <a href="/about/" className="header text-2xl mx-4 hover:underline cursor-pointer">About</a>
-      <a href="/blog/" className="header text-2xl mx-4 hover:underline cursor-pointer">Blog</a>
-      <a href="/contact/" className="header text-2xl mx-4 hover:underline cursor-pointer">Contact Me</a>
+    <div className="absolute content-center w-11/12 container flex flex-row items-center font-serif z-50">
+      <a href="/" className="header text-md sm:text-lg px-1 sm:px-4 py-2 sm:py-5 cursor-pointer hover:bg-gray-800 hover:bg-opacity-20">HWC's Blog</a>
+      <a href="/about/" className="header text-sm sm:text-lg px-1 sm:px-4 py-2 sm:py-5 cursor-pointer hover:bg-gray-800 hover:bg-opacity-20">About</a>
+      <a href="/blog/" className="header text-sm px-1 sm:px-4 py-2 sm:py-5 sm:text-lg cursor-pointer hover:bg-gray-800 hover:bg-opacity-20">Blog</a>
+      <a href="/contact/" className="header text-sm px-1 sm:px-4 py-2 sm:py-5 sm:text-lg cursor-pointer hover:bg-gray-800 hover:bg-opacity-20">Contact Me</a>
       <div className="flex-grow"></div>
-      <Toggle className="mr-0"></Toggle>
+      <Toggle className="mr-0 transition duration-500 hover:bg-gray-800 hover:bg-opacity-20"></Toggle>
     </div>
   )
 }
