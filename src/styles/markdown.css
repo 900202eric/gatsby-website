@@ -188,10 +188,11 @@ a {
 }
 
 img {
-  display: inline;
+  display: block;
   box-shadow: rgba(0, 0, 0, 0.55) 0 4px 8px;
-  width: 40%;
+  width: 30%;
   margin: 1rem;
+  @apply mx-auto;
 }
 
 a.anchor {

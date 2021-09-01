@@ -15,7 +15,11 @@ export default function Home({ data }) {
       <div className="container flex flex-col mx-auto">
         <div className="container flex h-screen">
           <Header></Header>
-          <div className="w-screen h-screen left-0 top-0 absolute select-none">
+          <div className="contaienr flex flex-col mx-auto my-auto items-center justify-center">
+            <h1 className="text-white border-8 mb-4 bg-gray-400 bg-opacity-40 p-6 border-white z-50 font-serif text-9xl">HWC</h1>
+            <h1 className="text-white border-white z-50 font-serif text-9xl border-b-8">BLOG SITE</h1>
+          </div>
+          <div className="w-screen h-screen left-0 top-0 absolute select-none bg-gray-300 dark:bg-opacity-0">
             <img className="opacity-70 m-0 object-cover w-screen h-screen pointer-events-none" alt="temple cover" src={data.image.publicURL}/>
           </div>
         </div>
