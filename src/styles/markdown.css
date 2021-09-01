@@ -193,3 +193,7 @@ img {
   width: 40%;
   margin: 1rem;
 }
+
+a.anchor {
+  display: none;
+}

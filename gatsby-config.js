@@ -45,13 +45,7 @@ module.exports = {
             },
           },
           "gatsby-remark-emoji",
-          {
-            resolve: 'gatsby-remark-autolink-headers',
-            options: {
-              offsetY: '100',
-              className: 'auto-anchor'
-            }
-          },
+          'gatsby-remark-autolink-headers',
         ],
       },
     },
