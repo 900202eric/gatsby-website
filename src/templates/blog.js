@@ -84,7 +84,6 @@ export const pageQuery = graphql `
         frontmatter {
           date(formatString: "MMMM YYYY")
           title 
-          author
           category
           description
         }

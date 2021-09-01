@@ -7,10 +7,10 @@ description: First Blog pOst of This Website
 music:
   lyrics: Baby Can We Dance
   song: Can We Dance
-  author: The Vamps
+  singer: The Vamps
   album: Meet The Vamps
 category: Test
 ---
-\# This is only a test
+# This is only a test
 
-\## But welcome you to my blog
+## But welcome you to my blog
