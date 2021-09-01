@@ -11,6 +11,8 @@ music:
   album: Meet The Vamps
 category: Test
 ---
+![icon png](/assets/icon.png "Gatsby Icon")
+
 # This is only a test
 
 ## But welcome you to my blog
