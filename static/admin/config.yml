@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "layout", widget: "hidden", default: "blog-post"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Music"
+        name: "music"
+        widget: "object"
+        fields:
+          - {label: "Lyrics", name: "lyrics", widget: "text", default: "", required: false}
+          - {label: "Song", name: "song", widget: "text", default: "", required: false}
+          - {label: "Author", name: "author", widget: "text", default: "", required: false}
+          - {label: "Album", name: "album", widget: "text", default: "", required: false}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}     
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "layout", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
