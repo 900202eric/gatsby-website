@@ -23,7 +23,7 @@ collections:
         fields:
           - {label: "Lyrics", name: "lyrics", widget: "text", default: "", required: false}
           - {label: "Song", name: "song", widget: "text", default: "", required: false}
-          - {label: "Author", name: "author", widget: "text", default: "", required: false}
+          - {label: "Singer", name: "singer", widget: "text", default: "", required: false}
           - {label: "Album", name: "album", widget: "text", default: "", required: false}
       - {label: "Category", name: "category", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}     
