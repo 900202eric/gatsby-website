@@ -42,7 +42,13 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          "gatsby-remark-reading-time",
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+            }
+          },
+          "gatsby-remark-reading-time-v2",
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {

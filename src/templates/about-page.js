@@ -10,7 +10,7 @@ export default function About({ data }) {
 
   return (
     <ThemeProvider>
-      <div classname="container flex flex-col mx-auto">
+      <div className="container flex flex-col mx-auto">
         <div className="container flex mx-auto">
           <Header></Header>
         </div>

@@ -4,9 +4,10 @@
 }
 
 .markdown p {
+  display: block;
   line-height: 200%;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -108,13 +109,22 @@ ul {
   list-style-position: inside;
 }
 
-ul ul {
+ul ul, ol ol {
   margin-left: 2rem;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
 }
 
 ol {
   list-style-type: decimal;
-  list-style-position: inside;
+  list-style-position: outside;
+  margin-left: 1rem;
 }
 
 li {
@@ -126,8 +136,12 @@ li::marker {
 }
 
 li p{
-  display: inline;
+  display: block;
   margin: 0rem;
+}
+
+.post-toc p{
+  display: inline;
 }
 
 code {
@@ -189,12 +203,46 @@ a {
 
 img {
   display: block;
-  box-shadow: rgba(0, 0, 0, 0.55) 0 4px 8px;
-  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.55) 0 1px 2px;
+  width: 95%;
   margin: 1rem;
   @apply mx-auto;
 }
 
 a.anchor {
   display: none;
+}
+
+.footnote-backref{
+  font-family: monospace;
+}
+
+img + em {
+  display: block;
+  text-align: center;
+}
+
+.markdown h2 a {
+  @apply text-black;
+  @apply dark:text-white;
+}
+
+.markdown h3 a {
+  @apply text-black;
+  @apply dark:text-white;
+}
+
+.markdown h4 a {
+  @apply text-black;
+  @apply dark:text-white;
+}
+
+.markdown h5 a {
+  @apply text-black;
+  @apply dark:text-white;
+}
+
+.markdown h6 a {
+  @apply text-black;
+  @apply dark:text-white;
 }

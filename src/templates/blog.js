@@ -25,9 +25,8 @@ export default class Blog extends React.Component {
                 <article key={post.id} className="container flex flex-col sm:flex-row rounded-lg shadow-xl my-8 bg-white dark:bg-gray-600 h-92 sm:h-60">
                   <div className="container w-full py-5 px-8">
                     <p className="font-bold block text-gray-500 dark:text-gray-300 text-md uppercase">{post.frontmatter.date}&nbsp;•&nbsp;
-                    <span className="font-semibold text-green-600  dark:text-green-300 normal-case">{post.frontmatter.category}</span>&nbsp;•&nbsp;
-                    <span className="font-semibold text-purple-500 dark:text-purple-200 normal-case">{post.fields.readingTime.text}</span></p>
-                    <h2 className="inline-block text-2xl font-semibold my-2 hover:underline cursor-pointer"><Link to={post.fields.slug}>{post.frontmatter.title}</Link></h2>
+                    <span className="font-medium text-green-600  dark:text-green-300 normal-case">{post.frontmatter.category}</span></p>
+                    <h2 className="inline-block text-2xl font-medium my-2 hover:underline cursor-pointer text-blue-300"><Link to={post.fields.slug}>{post.frontmatter.title}</Link></h2>
                     <h5 className="h-24 w-5/6 sm:block hidden">{post.frontmatter.description}</h5>
                     <Link to={post.fields.slug} className="font-semibold sm:mx-auto mb-0 flex flex-row justify-end">
                       <button className="dark:text-white p-1 px-3 rounded hover:bg-blue-100 dark:hover:bg-gray-500 font-bold">Read More →</button>
