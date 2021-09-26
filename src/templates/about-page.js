@@ -4,12 +4,14 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import { ThemeProvider } from '../components/themeContext'
 import "../styles/markdown.css"
+import Seo from "../components/seo"
 
 export default function About({ data }) {
   const post = data.markdownRemark
 
   return (
     <ThemeProvider>
+      <Seo title={"About"}></Seo>
       <div className="container flex flex-col mx-auto">
         <div className="container flex mx-auto">
           <Header></Header>

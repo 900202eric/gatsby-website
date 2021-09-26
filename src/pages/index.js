@@ -4,6 +4,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import { ThemeProvider } from '../components/themeContext'
 import Music from "../components/musicbar"
+import Seo from "../components/seo"
 import "../styles/markdown.css"
 
 export default function Home({ data }) {
@@ -12,6 +13,7 @@ export default function Home({ data }) {
 
   return (
     <ThemeProvider>
+    <Seo title={"Home"}></Seo>
       <div className="container flex flex-col mx-auto">
         <div className="container flex h-screen">
           <Header></Header>

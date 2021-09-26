@@ -5,6 +5,7 @@ import Footer from "../components/footer"
 import Music from "../components/musicbar"
 import { ThemeProvider } from '../components/themeContext'
 import "../styles/markdown.css"
+import Seo from "../components/seo"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 deckDeckGoHighlightElement();
 
@@ -13,6 +14,7 @@ export default function BlogPost({ data }) {
 
   return (
     <ThemeProvider>
+      <Seo title={post.frontmatter.title}></Seo>
       <div className="container flex flex-col mx-auto">
         <Header></Header>
 

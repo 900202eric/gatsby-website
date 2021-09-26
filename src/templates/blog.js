@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import Seo from "../components/seo"
 import { ThemeProvider } from '../components/themeContext'
 
 export default class Blog extends React.Component {
@@ -15,7 +16,8 @@ export default class Blog extends React.Component {
     const nextPage = "/blog/" + (currentPage + 1).toString()
 
     return (
-      <ThemeProvider>    
+      <ThemeProvider>
+        <Seo title={"Blog Post"}></Seo>    
         <div className="container flex flex-col mx-auto">
           <Header></Header> 
 

@@ -1,14 +1,26 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "HWC First Blog",
-    description: "This is my blog made from scratch!"
+    siteUrl: "https://www.hweic.com",
+    title: "H.Wei.C Blog Site",
+    description: "在這裏看到的都是真的。",
+    author: "H.W.C",
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `H.Wei.C Blog Site`,
+        short_name: `H.Wei.C`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        start_url: `/`,
+        icon: `src/images/icon.png`,
+      },
+    },
     "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-google-gtag`,
