@@ -2,7 +2,7 @@
 layout: blog-post
 draft: false
 date: 2021-09-26T05:38:50.234Z
-title: 軟體實驗課程體驗
+title: 軟體實驗課程專案
 description: 架完網站沒想過第一篇居然是這個！這是一篇紀錄大二下軟體實驗專案開發的文章，也是本站的第一篇文章。
 music:
   lyrics: Little darling. It's been a long, cold, lonely winter.
